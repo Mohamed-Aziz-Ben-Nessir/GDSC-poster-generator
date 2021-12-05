@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Form</h1>
+        <form method="POST" enctype="multipart/form-data">
+            
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+            
+            <label for="name1">name1</label><br>
+            <input type="text" id="name1" name="name1"><br>
+            
+            <label for="pos1">pos1</label><br>
+            <input type="text" id="pos1" name="pos1"><br>
+
+            <label for="name2">name2</label><br>
+            <input type="text" id="name2" name="name2"><br>
+
+            <label for="pos2">pos2</label><br>
+            <input type="text" id="pos2" name="pos2"><br>
+
+            <label for="date">date</label><br>
+            <input type="text" id="date" name="date"><br>
+
+            <label for="time">time</label><br>
+            <input type="text" id="time" name="time"><br>
+
+            <label for="location">location</label><br>
+            <input type="text" id="location" name="location"><br>
+
+            <input type="file" name="pic1"><br>
+ 
+            <input type="file" name="pic2"><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </body>
+</html>
