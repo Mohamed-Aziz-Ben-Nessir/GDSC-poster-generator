@@ -143,7 +143,7 @@ def make_poster(Data):
         write_text(Drawable_poster,date_pos, Data['date'],date_colours)
         write_text(Drawable_poster,time_pose, Data['time'],time_colours)
         write_text(Drawable_poster,location_pos, Data['location'],loc_colours)
-        Drawable_poster.rectangle(name_rank_pos,outline=BLACK,width=5)
+
         return Poster
    
 
