@@ -98,7 +98,7 @@ def write_text(picture,pos,text,text_colours,allignment='L',multi_line=False,max
             ligne_end_index+=1
             current_word+=1
 
-Data={'Title':'Event is:CENTERED BOYS',
+data={'Title':'Event is:CENTERED BOYS',
       'name1':'MOHAMED AZIZ BEN NESSIR',
       'pos1':' ML CO LEAD',
       'name2':'name2',
@@ -121,7 +121,7 @@ single_image_pos=(600,1100)
 BLACK=(14,17,17)
 GRAY=(173,173,173)
 
-def make_poster(data):
+def make_poster(Data):
 
     if True:
 
