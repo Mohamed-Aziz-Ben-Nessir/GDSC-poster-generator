@@ -143,7 +143,9 @@ def make_poster(Data):
         write_text(Drawable_poster,date_pos, Data['date'],date_colours)
         write_text(Drawable_poster,time_pose, Data['time'],time_colours)
         write_text(Drawable_poster,location_pos, Data['location'],loc_colours)
-
+        
+        
+        Poster.save("Poster.jpg")
         return Poster
    
 
