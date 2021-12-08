@@ -9,7 +9,7 @@ class Form(BaseModel):
     pos2 : str
     date : str
     time : str
-    locaton : str
+    location : str
     pic1 : UploadFile
     pic2 : UploadFile
 

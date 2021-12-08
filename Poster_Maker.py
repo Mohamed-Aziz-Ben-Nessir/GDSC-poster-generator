@@ -1,8 +1,5 @@
 from PIL import Image, ImageFont, ImageDraw 
 
-
-
-
 def get_word_size(word,font_size):
     """get's the dimansions of any given word for any giving font size"""
     Font=ImageFont.truetype(FONT, font_size)
@@ -98,7 +95,7 @@ def write_text(picture,pos,text,text_colours,allignment='L',multi_line=False,max
             ligne_end_index+=1
             current_word+=1
 
-data={'Title':'Event is:CENTERED BOYS',
+data={'title':'Event is:CENTERED BOYS',
       'name1':'MOHAMED AZIZ BEN NESSIR',
       'pos1':' ML CO LEAD',
       'name2':'name2',
@@ -107,7 +104,7 @@ data={'Title':'Event is:CENTERED BOYS',
       'time':'23:23',
       'location':'A207',
       'single':1}
-FONT='Basic.ttf'
+FONT='arial.ttf'
 L_DTL_edge=2000 #make the time date and location alligne on the left
 R_DTL_edge=1500 #make the time date and location alligne on the right
 event_name_pos=(670,100,L_DTL_edge-150,320)
@@ -128,7 +125,7 @@ def make_poster(Data):
         name_rank_pos=(1210,550,L_DTL_edge,750)
         
         name_colors=[BLACK for i in Data['name1'].split(' ')]+[GRAY for i in Data['pos1'].split(' ')]
-        Event_colors=[BLACK for i in Data['Title'].split(' ')]
+        Event_colors=[BLACK for i in Data['title'].split(' ')]
         date_colours=[BLACK for i in Data['date'].split(' ')]
         time_colours=[BLACK for i in Data['time'].split(' ')]
         loc_colours=[BLACK for i in Data['location'].split(' ')]
@@ -138,14 +135,14 @@ def make_poster(Data):
         
         
 
-        write_text(Drawable_poster,event_name_pos,Data['Title'],Event_colors,allignment='CC')
+        write_text(Drawable_poster,event_name_pos,Data['title'],Event_colors,allignment='CC')
         write_text(Drawable_poster,name_rank_pos, Data['name1']+Data['pos1'],name_colors,multi_line=True,allignment='LC',max_font_size=75)
         write_text(Drawable_poster,date_pos, Data['date'],date_colours)
         write_text(Drawable_poster,time_pose, Data['time'],time_colours)
         write_text(Drawable_poster,location_pos, Data['location'],loc_colours)
         
         
-        Poster.save("Poster.jpg")
+        Poster.save("Poster.png")
         return Poster
    
 

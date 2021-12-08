@@ -4,6 +4,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from schemas import Form
+from Poster_Maker import make_poster
 
 app = FastAPI()
 
@@ -16,7 +17,7 @@ def get_form(request: Request):
 
 @app.post('/', response_class=HTMLResponse)
 def post_form(request: Request, form_data: Form = Depends(Form.as_form)):
-    print(form_data)
+    make_poster(dict(form_data))
     return templates.TemplateResponse("form.html", {"request": request})
 
 
